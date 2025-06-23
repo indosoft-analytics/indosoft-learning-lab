@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 3: Data Visualization | Python for Data Analysis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #FA812F;
+      --secondary-color: #FAB12F;
+      --light-bg: #FEF3E2;
+      --deep-teal: #1A7F80;
+      --dark-navy: #2A3F5F;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+    
+    .module-header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem 0;
+      margin-bottom: 1.5rem;
+      border-radius: 0;
+    }
+    
+    @media (min-width: 768px) {
+      .module-header {
+        padding: 3rem 0;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+    
+    .concept-card {
+      border-left: 4px solid var(--primary-color);
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+      background-color: white;
+      border-radius: 0.25rem;
+    }
+    
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-left-color: var(--deep-teal);
+    }
+    
+    .topic-item {
+      padding: 0.75rem 1rem;
+      border-left: 3px solid var(--secondary-color);
+      margin-bottom: 0.5rem;
+      background-color: rgba(250, 177, 47, 0.1);
+      font-size: 0.95rem;
+    }
+    
+    .chart-placeholder img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .code-block {
+      background-color: var(--dark-navy);
+      color: #D4EDE1;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+    }
+    
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+    
+    .back-to-course {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    
+    .back-to-course:hover {
+      color: var(--light-bg);
+    }
+    
+    /* Responsive typography */
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      h3 {
+        font-size: 1.75rem;
+      }
+    }
+    
+    /* Button adjustments */
+    .btn-lg {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+        margin-bottom: 0;
+      }
+    }
+    
+    /* Alert box adjustments */
+    .alert {
+      font-size: 0.95rem;
+      padding: 1rem;
+    }
+    
+    /* List group items */
+    .list-group-item {
+      padding: 0.75rem 1.25rem;
+    }
+    
+    /* Footer adjustments */
+    footer {
+      font-size: 0.9rem;
+      padding: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Module Header -->
+  <header class="module-header text-center">
+    <div class="container">
+      <h1 class="display-4"><i class="fas fa-chart-line me-2"></i>Module 3: Data Visualization</h1>
+      <p class="lead">Transform raw data into compelling visual stories</p>
+      <a href="python-course.html" class="back-to-course">
+        <i class="fas fa-arrow-left me-2"></i>Back to Course
+      </a>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <!-- Module Introduction -->
+        <section class="mb-5">
+          <h2 class="mb-4 text-primary"><i class="fas fa-eye me-2"></i>Visualization Fundamentals</h2>
+          <p>Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, we can see and understand trends, outliers, and patterns in data.</p>
+          
+          <div class="alert alert-primary">
+            <i class="fas fa-lightbulb me-2"></i>
+            <strong>Key Principle:</strong> A good visualization tells a story, removing the noise from data and highlighting the useful information.
+          </div>
+        </section>
+        
+        <!-- Matplotlib Fundamentals -->
+        <section class="mb-5">
+          <div class="card concept-card">
+            <div class="card-body">
+              <h3 class="card-title"><i class="fas fa-chart-bar text-primary me-2"></i>Matplotlib Fundamentals</h3>
+              <p class="card-text">The foundation of Python visualization - a MATLAB-style plotting system.</p>
+              
+              <div class="topic-item">Figure and Axes objects (plt.figure(), plt.subplots())</div>
+              <div class="topic-item">Basic plot types (line, bar, scatter, histogram)</div>
+              <div class="topic-item">Customizing markers, lines, and colors</div>
+              <div class="topic-item">Adding titles, labels, and legends</div>
+              
+              <div class="mt-3">
+                <h5>Example Code:</h5>
+                <div class="code-block">
+                  <pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# Create data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create plot
+fig, ax = plt.subplots(figsize=(8,4))
+ax.plot(x, y, 'b-', linewidth=2, label='Sine Wave')
+ax.set_title('Basic Matplotlib Example')
+ax.set_xlabel('X values')
+ax.set_ylabel('Y values')
+ax.legend()
+plt.show()</code></pre>
+                </div>
+              </div>
+              
+              <div class="chart-placeholder mt-3">
+                <img src="line graph.png" alt="Matplotlib Line Chart" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Seaborn Section -->
+        <section class="mb-5">
+          <div class="card concept-card">
+            <div class="card-body">
+              <h3 class="card-title"><i class="fas fa-chart-area text-primary me-2"></i>Seaborn for Statistical Plots</h3>
+              <p class="card-text">High-level interface for drawing attractive statistical graphics.</p>
+              
+              <div class="topic-item">Relationship plots (scatterplot, lineplot)</div>
+              <div class="topic-item">Distribution plots (histplot, kdeplot, ecdfplot)</div>
+              <div class="topic-item">Categorical plots (barplot, boxplot, violinplot)</div>
+              <div class="topic-item">Matrix plots (heatmap, clustermap)</div>
+              
+              <div class="mt-3">
+                <h5>Example Code:</h5>
+                <div class="code-block">
+                  <pre><code>import seaborn as sns
+import pandas as pd
+
+# Load sample data
+tips = sns.load_dataset('tips')
+
+# Create plot
+sns.set_theme(style="whitegrid")
+g = sns.relplot(
+    data=tips,
+    x="total_bill", y="tip", col="time",
+    hue="smoker", style="smoker", size="size",
+)
+g.set_axis_labels("Total bill ($)", "Tip ($)")
+g.legend.set_title("Smoker")</code></pre>
+                </div>
+              </div>
+              
+              <div class="chart-placeholder mt-3">
+                <img src="realational plot.png" alt="Seaborn Relational Plot" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Professional Customization Section -->
+        <section class="mb-5">
+          <div class="card concept-card">
+            <div class="card-body">
+              <h3 class="card-title"><i class="fas fa-paint-brush text-primary me-2"></i>Professional Customization</h3>
+              <p class="card-text">Advanced techniques to create publication-quality visualizations.</p>
+              
+              <div class="topic-item">Color palettes and themes</div>
+              <div class="topic-item">Figure layout and composition</div>
+              <div class="topic-item">Advanced annotations and text styling</div>
+              <div class="topic-item">Grid and axis customization</div>
+              
+              <div class="mt-3">
+                <h5>Professional Visualization Example:</h5>
+                <div class="code-block">
+                  <pre><code>import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+# Create professional-looking sample data
+np.random.seed(42)
+professions = ['Engineer', 'Doctor', 'Teacher', 'Analyst', 'Manager']
+df = pd.DataFrame({
+    'Age': np.random.randint(25, 65, 200),
+    'Income': np.random.normal(50000, 20000, 200).astype(int),
+    'Education': np.random.randint(12, 21, 200),
+    'Experience': np.random.randint(1, 40, 200),
+    'Profession': np.random.choice(professions, 200),
+    'Hours': np.random.normal(40, 10, 200).astype(int)
+})
+
+# Set professional style
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette("husl")
+
+# Create figure with constrained layout
+fig, ax = plt.subplots(figsize=(12, 7), layout='constrained')
+
+# Create enhanced scatter plot
+scatter = ax.scatter(
+    x='Age',
+    y='Income',
+    c='Education',
+    cmap='viridis',
+    alpha=0.8,
+    data=df,
+    s=df['Experience']*2,  # Size by experience
+    edgecolor='white',
+    linewidth=0.8
+)
+
+# Professional customizations
+ax.set_title('Income Distribution by Age and Education Level\nAcross Professions', 
+            pad=20, 
+            fontsize=16,
+            fontweight='bold')
+
+ax.set_xlabel('Age (Years)', 
+             labelpad=12,
+             fontsize=12,
+             fontweight='semibold')
+
+ax.set_ylabel('Annual Income ($)', 
+             labelpad=12,
+             fontsize=12,
+             fontweight='semibold')
+
+# Improve ticks
+ax.tick_params(axis='both', which='major', labelsize=10)
+ax.grid(True, linestyle='--', alpha=0.4)
+
+# Add professional colorbar
+cbar = fig.colorbar(scatter, ax=ax, pad=0.02)
+cbar.set_label('Years of Education', 
+              rotation=270, 
+              labelpad=25,
+              fontsize=12,
+              fontweight='semibold')
+cbar.ax.tick_params(labelsize=10)
+
+# Add annotation
+ax.annotate('Data: Synthetic Professional Dataset | Visualization: Matplotlib',
+           xy=(0.5, -0.15),
+           xycoords='axes fraction',
+           ha='center',
+           fontsize=9,
+           color='gray')
+
+# Add legend for profession (example)
+handles = [plt.Line2D([0], [0], marker='o', color='w', 
+           markerfacecolor='gray', markersize=10, 
+           label=prof) for prof in professions[:3]]
+ax.legend(handles=handles, title='Professions', 
+          bbox_to_anchor=(1.02, 1), 
+          loc='upper left')
+
+plt.savefig('professional_income_plot.png', dpi=300, bbox_inches='tight')
+plt.show()</code></pre>
+                </div>
+              </div>
+              
+              <div class="chart-placeholder mt-3">
+                <img src="professional_plot_example.png" alt="Professional Customization Example" class="img-fluid">
+              </div>
+              
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-tips me-2"></i>
+                <strong>Pro Tip:</strong> For truly publication-ready figures, consider:
+                <ul class="mt-2 mb-0">
+                  <li>Using vector formats (.svg or .pdf) for print publications</li>
+                  <li>Adjusting font sizes for your target medium (smaller for print, larger for presentations)</li>
+                  <li>Adding a descriptive caption when publishing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Resources Section -->
+        <section class="mb-5">
+          <h3 class="mb-3 text-primary"><i class="fas fa-book me-2"></i>Additional Resources</h3>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+              <i class="fas fa-external-link-alt me-2"></i>
+              Matplotlib Documentation
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <i class="fas fa-external-link-alt me-2"></i>
+              Seaborn Gallery
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <i class="fas fa-external-link-alt me-2"></i>
+              ColorBrewer Color Palettes
+            </a>
+          </div>
+        </section>
+        
+        <!-- Next Steps -->
+        <section class="text-center py-4 bg-light rounded">
+          <div class="d-flex flex-column flex-md-row justify-content-center">
+            <button class="btn btn-primary btn-lg me-md-2 mb-2 mb-md-0">
+              <i class="fas fa-tasks me-2"></i>Start Exercises
+            </button>
+            <button class="btn btn-outline-primary btn-lg">
+              <i class="fas fa-project-diagram me-2"></i>Project Challenge
+            </button>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2023 Data Analysis Learning Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

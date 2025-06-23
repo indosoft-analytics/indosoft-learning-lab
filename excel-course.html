@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excel for Data Analysis | DALearn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #FA812F;
+      --secondary-color: #FAB12F;
+      --light-bg: #FEF3E2;
+      --dark-bg: #2C3E50;
+      --accent-color: #3498DB;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    header, nav {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .course-header {
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+    }
+    
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: var(--dark-bg);
+      color: white;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: var(--primary-color) !important;
+    }
+    
+    .navbar-nav .nav-link {
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline-light {
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-light:hover {
+      background-color: var(--secondary-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Course Content Styles */
+    .course-content {
+      padding: 3rem 0;
+    }
+    
+    .module-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .module-card .card-header {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+    }
+    
+    .module-card .card-body {
+      padding: 1.5rem;
+    }
+    
+    .lesson-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .lesson-item:last-child {
+      border-bottom: none;
+    }
+    
+    .lesson-item a {
+      color: var(--dark-bg);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .lesson-item a:hover {
+      color: var(--accent-color);
+      padding-left: 5px;
+    }
+    
+    .lesson-item .badge {
+      background-color: var(--accent-color);
+    }
+    
+    /* Resources Section */
+    .resource-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .resource-card .card-body {
+      padding: 1.5rem;
+    }
+    
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 100;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .fab:hover {
+      transform: scale(1.1);
+      background-color: #2980B9;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .course-header {
+        padding: 2rem 0;
+      }
+      
+      .course-content {
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+ <!-- Course Header -->
+<header class="course-header text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <h1 class="display-4 mb-4">Excel for Data Analysis</h1>
+        <p class="lead">Master data cleaning, formulas, pivot tables, and dashboard creation with hands-on projects</p>
+        <a href="#syllabus" class="btn btn-light btn-lg mt-4">View Syllabus</a>
+        <a href="index.html" class="btn btn-light btn-lg mt-4">
+        <i class="fas fa-arrow-left me-2"></i>Back to Course
+      </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main class="container">
+    <!-- Course Overview -->
+    <section class="course-content">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="mb-4">Course Overview</h2>
+          <p class="lead">Transform raw data into meaningful insights with Microsoft Excel, the world's most popular data analysis tool.</p>
+          <p>This comprehensive course will take you from Excel basics to advanced data analysis techniques used by professionals in business, finance, and data science. You'll learn through hands-on exercises and real-world projects that build practical skills you can apply immediately.</p>
+          
+          <h3 class="mt-5 mb-3">What You'll Learn</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="fa-ul">
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Essential Excel formulas and functions for data analysis</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Advanced data cleaning and transformation techniques</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Powerful PivotTable features for data summarization</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="fa-ul">
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Data visualization and dashboard creation</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Automation with Excel macros</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Real-world case studies and projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Syllabus -->
+    <section id="syllabus" class="py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="text-center mb-5">Course Syllabus</h2>
+          
+          <div class="accordion" id="courseAccordion">
+            <!-- Module 1 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module1Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#module1">
+                    Module 1: Excel Fundamentals for Data Analysis
+                  </button>
+                </h3>
+              </div>
+              <div id="module1" class="collapse show" aria-labelledby="module1Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Introduction to Excel Interface</a>
+                    <span class="badge rounded-pill bg-primary float-end">15 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Data Entry and Formatting</a>
+                    <span class="badge rounded-pill bg-primary float-end">22 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Essential Formulas and Functions</a>
+                    <span class="badge rounded-pill bg-primary float-end">30 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Data Validation Techniques</a>
+                    <span class="badge rounded-pill bg-primary float-end">18 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice Exercise: Sales Data Cleanup</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module2Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2">
+                    Module 2: Advanced Data Manipulation
+                  </button>
+                </h3>
+              </div>
+              <div id="module2" class="collapse" aria-labelledby="module2Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Text and Date Functions</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Lookup Functions (VLOOKUP, INDEX/MATCH)</a>
+                    <span class="badge rounded-pill bg-primary float-end">35 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Conditional Logic with IF, AND, OR</a>
+                    <span class="badge rounded-pill bg-primary float-end">28 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice Exercise: Employee Database Analysis</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module3Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3">
+                    Module 3: PivotTables and Data Summarization
+                  </button>
+                </h3>
+              </div>
+              <div id="module3" class="collapse" aria-labelledby="module3Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Creating and Customizing PivotTables</a>
+                    <span class="badge rounded-pill bg-primary float-end">30 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>PivotTable Calculations and Grouping</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Slicers and Timelines for Interactive Reports</a>
+                    <span class="badge rounded-pill bg-primary float-end">20 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice Exercise: Sales Performance Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module4Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4">
+                    Module 4: Data Visualization and Dashboards
+                  </button>
+                </h3>
+              </div>
+              <div id="module4" class="collapse" aria-labelledby="module4Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Advanced Charting Techniques</a>
+                    <span class="badge rounded-pill bg-primary float-end">28 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Conditional Formatting for Data Insights</a>
+                    <span class="badge rounded-pill bg-primary float-end">22 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Interactive Dashboard Design</a>
+                    <span class="badge rounded-pill bg-primary float-end">35 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Final Project: Comprehensive Business Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Capstone</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Resources -->
+    <section class="py-5 bg-white rounded-3">
+      <div class="container">
+        <h2 class="text-center mb-5">Course Resources</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-file-excel fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Practice Files</h5>
+                <p class="card-text">Downloadable Excel workbooks for each module with exercises and solutions.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-book fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Cheat Sheets</h5>
+                <p class="card-text">Quick reference guides for Excel formulas, shortcuts, and best practices.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Dashboard Templates</h5>
+                <p class="card-text">Professional templates to kickstart your data visualization projects.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>DALearn</h5>
+          <p>Your comprehensive platform for mastering data analysis skills with practical, real-world projects.</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#home" class="text-white">Home</a></li>
+            <li><a href="index.html#courses" class="text-white">Courses</a></li>
+            <li><a href="index.html#resources" class="text-white">Resources</a></li>
+            <li><a href="index.html#contact" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        &copy; 2025 Data Analysis Learning Platform. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="fab">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+</body>
+</html>

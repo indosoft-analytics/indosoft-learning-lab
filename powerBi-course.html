@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Power BI / Tableau | DALearn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #FA812F;
+      --secondary-color: #FAB12F;
+      --light-bg: #FEF3E2;
+      --dark-bg: #2C3E50;
+      --accent-color: #3498DB;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    header, nav {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .course-header {
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+    }
+    
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: var(--dark-bg);
+      color: white;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: var(--primary-color) !important;
+    }
+    
+    .module-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .module-card .card-header {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+    }
+    
+    .lesson-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .lesson-item:last-child {
+      border-bottom: none;
+    }
+    
+    .lesson-item a {
+      color: var(--dark-bg);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .lesson-item a:hover {
+      color: var(--accent-color);
+      padding-left: 5px;
+    }
+    
+    .lesson-item .badge {
+      background-color: var(--accent-color);
+    }
+    
+    .resource-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 100;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .fab:hover {
+      transform: scale(1.1);
+      background-color: #2980B9;
+    }
+    
+    @media (max-width: 768px) {
+      .course-header {
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <!-- Course Header -->
+  <header class="course-header text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 mb-4">Power BI / Tableau</h1>
+          <p class="lead">Create interactive, visually stunning data dashboards for business intelligence</p>
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="index.html" class="btn btn-outline-light">
+              <i class="fas fa-arrow-left me-1"></i> Back to Courses
+            </a>
+            <a href="#syllabus" class="btn btn-light">View Syllabus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Course Overview -->
+    <section class="py-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="mb-4">Course Overview</h2>
+          <p class="lead">Master the art of data visualization and business intelligence with Power BI and Tableau.</p>
+          <p>This comprehensive course will teach you to transform raw data into compelling visual stories that drive business decisions. You'll learn both Power BI and Tableau to become proficient in the industry's leading BI tools.</p>
+          
+          <h3 class="mt-5 mb-3">What You'll Learn</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="fa-ul">
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Data connection and transformation</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Creating interactive visualizations</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Dashboard design principles</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="fa-ul">
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Advanced calculations and DAX</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Sharing and collaboration features</li>
+                <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Real-world business case studies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Syllabus -->
+    <section id="syllabus" class="py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="text-center mb-5">Course Syllabus</h2>
+          
+          <div class="accordion" id="courseAccordion">
+            <!-- Module 1 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module1Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#module1">
+                    Module 1: Fundamentals of Data Visualization
+                  </button>
+                </h3>
+              </div>
+              <div id="module1" class="collapse show" aria-labelledby="module1Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Introduction to BI Tools</a>
+                    <span class="badge rounded-pill bg-primary float-end">20 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Data Visualization Principles</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Connecting to Data Sources</a>
+                    <span class="badge rounded-pill bg-primary float-end">30 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice: First Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 2 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module2Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2">
+                    Module 2: Power BI Mastery
+                  </button>
+                </h3>
+              </div>
+              <div id="module2" class="collapse" aria-labelledby="module2Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Power Query Transformation</a>
+                    <span class="badge rounded-pill bg-primary float-end">35 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>DAX Formulas</a>
+                    <span class="badge rounded-pill bg-primary float-end">40 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Power BI Service</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice: Sales Analytics Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module3Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3">
+                    Module 3: Tableau Expertise
+                  </button>
+                </h3>
+              </div>
+              <div id="module3" class="collapse" aria-labelledby="module3Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Tableau Interface</a>
+                    <span class="badge rounded-pill bg-primary float-end">30 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Calculated Fields</a>
+                    <span class="badge rounded-pill bg-primary float-end">35 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Parameters and Sets</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Practice: Marketing Performance Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="module-card card mb-3">
+              <div class="card-header" id="module4Heading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link text-white text-decoration-none w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4">
+                    Module 4: Advanced BI Techniques
+                  </button>
+                </h3>
+              </div>
+              <div id="module4" class="collapse" aria-labelledby="module4Heading" data-parent="#courseAccordion">
+                <div class="card-body">
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Storytelling with Data</a>
+                    <span class="badge rounded-pill bg-primary float-end">28 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Performance Optimization</a>
+                    <span class="badge rounded-pill bg-primary float-end">22 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-play-circle me-2 text-primary"></i>Sharing and Security</a>
+                    <span class="badge rounded-pill bg-primary float-end">25 min</span>
+                  </div>
+                  <div class="lesson-item">
+                    <a href="#"><i class="fas fa-laptop-code me-2 text-primary"></i>Final Project: Comprehensive Business Dashboard</a>
+                    <span class="badge rounded-pill bg-success float-end">Capstone</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Resources -->
+    <section class="py-5 bg-white rounded-3">
+      <div class="container">
+        <h2 class="text-center mb-5">Course Resources</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-chart-bar fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Sample Dashboards</h5>
+                <p class="card-text">Downloadable Power BI and Tableau files for study.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-palette fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Color Palettes</h5>
+                <p class="card-text">Professional color schemes for effective visualizations.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resource-card card h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-file-alt fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Design Templates</h5>
+                <p class="card-text">Layout templates for common dashboard types.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>DALearn</h5>
+          <p>Your comprehensive platform for mastering data analysis skills with practical, real-world projects.</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#home" class="text-white">Home</a></li>
+            <li><a href="index.html#courses" class="text-white">Courses</a></li>
+            <li><a href="index.html#resources" class="text-white">Resources</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        &copy; 2025 Data Analysis Learning Platform. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="fab">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+</body>
+</html>

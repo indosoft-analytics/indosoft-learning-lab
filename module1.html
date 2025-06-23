@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python for Data Analysis | DALearn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #FA812F;
+      --secondary-color: #FAB12F;
+      --light-bg: #FEF3E2;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    .course-header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 3rem 0;
+      margin-bottom: 2rem;
+    }
+    
+    .module-card {
+      border-left: 4px solid var(--primary-color);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .topic-item {
+      padding: 0.75rem 1.25rem;
+      border-left: 3px solid var(--secondary-color);
+      margin-bottom: 0.5rem;
+      background-color: rgba(250, 177, 47, 0.1);
+    }
+    
+    .python-fundamentals {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    
+    .fundamentals-topic {
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Course Header -->
+  <header class="course-header text-center">
+    <div class="container">
+      <h1 class="display-4"><i class="fas fa-code me-3"></i>Module 1 :Python for Data Analysis</h1>
+      <p class="lead">Master data manipulation, visualization, and analysis with Python's powerful libraries</p>
+      <a href="index.html#courses" class="btn btn-light mt-3">
+        <i class="fas fa-arrow-left me-2"></i>Back to All Courses
+      </a>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row">
+      <div class="col-lg-12">  <!-- Changed from col-lg-8 to col-lg-12 to use full width -->
+        <!-- Python Fundamentals (Always Visible) -->
+        <section class="python-fundamentals">
+          <h2 class="mb-4"><i class="fas fa-laptop-code text-primary me-2"></i>Python Fundamentals</h2>
+          
+          <div class="fundamentals-topic">
+            <h5><i class="fas fa-keyboard text-secondary me-2"></i>Python Syntax and Basic Constructs</h5>
+            <ul>
+              <li>Variables and data types</li>
+              <li>Operators and expressions</li>
+              <li>Basic input/output</li>
+              <li>Code structure and indentation</li>
+            </ul>
+          </div>
+          
+          <div class="fundamentals-topic">
+            <h5><i class="fas fa-shapes text-secondary me-2"></i>Data Structures</h5>
+            <ul>
+              <li>Lists, tuples, and dictionaries</li>
+              <li>Sets and their operations</li>
+              <li>Mutability vs immutability</li>
+              <li>Common methods and operations</li>
+            </ul>
+          </div>
+          
+          <div class="fundamentals-topic">
+            <h5><i class="fas fa-code-branch text-secondary me-2"></i>Control Flow</h5>
+            <ul>
+              <li>Conditional statements (if/elif/else)</li>
+              <li>Loops (for and while)</li>
+              <li>Break, continue, and pass</li>
+              <li>List comprehensions</li>
+            </ul>
+          </div>
+          
+          <div class="fundamentals-topic">
+            <h5><i class="fas fa-function text-secondary me-2"></i>Functions</h5>
+            <ul>
+              <li>Defining and calling functions</li>
+              <li>Parameters and return values</li>
+              <li>Scope and namespaces</li>
+              <li>Lambda functions</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Course Modules (Other Modules) -->
+        <section class="mb-5">
+          <h2 class="mb-4"><i class="fas fa-list-ol text-primary me-2"></i>Course Modules</h2>
+          
+          <div class="row g-4">
+            <!-- Module 2 -->
+            <div class="col-md-6">
+              <div class="card module-card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><a href="module2.html">Module 2: Pandas for Data Manipulation</a></h5>
+                  <div class="mt-3">
+                    <div class="topic-item">Series and DataFrames</div>
+                    <div class="topic-item">Data cleaning techniques</div>
+                    <div class="topic-item">Filtering and sorting</div>
+                    <div class="topic-item">GroupBy operations</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 3 -->
+            <div class="col-md-6">
+              <div class="card module-card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><a href="module3.html">Module 3: Data Visualization</a></h5>
+                  <div class="mt-3">
+                    <div class="topic-item">Matplotlib fundamentals</div>
+                    <div class="topic-item">Seaborn for statistical plots</div>
+                    <div class="topic-item">Customizing visualizations</div>
+                    <div class="topic-item">Dashboard creation</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 4 -->
+            <div class="col-md-6">
+              <div class="card module-card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><a href="module4.html">Module 4: NumPy for Numerical Analysis</a></h5>
+                  <div class="mt-3">
+                    <div class="topic-item">NumPy arrays</div>
+                    <div class="topic-item">Vectorized operations</div>
+                    <div class="topic-item">Statistical functions</div>
+                    <div class="topic-item">Linear algebra basics</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Module 5 -->
+            <div class="col-md-6">
+              <div class="card module-card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Module 5: Real-world Projects</h5>
+                  <div class="mt-3">
+                    <div class="topic-item">Sales data analysis</div>
+                    <div class="topic-item">COVID-19 trends</div>
+                    <div class="topic-item">Financial data processing</div>
+                    <div class="topic-item">Automated reporting</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2023 Data Analysis Learning Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
